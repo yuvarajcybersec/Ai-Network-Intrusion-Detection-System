@@ -5,6 +5,7 @@ import os
 
 packet_count = 0
 csv_file = "logs/captured_packets.csv"
+CURRENT_LABEL = "suspicious"
 
 # Create logs directory if it does not exist
 os.makedirs("logs", exist_ok=True)
@@ -20,7 +21,8 @@ if not os.path.exists(csv_file):
             "protocol",
             "src_port",
             "dst_port",
-            "packet_length"
+            "packet_length",
+            "label"
         ])
 
 def extract_features(packet):
@@ -58,7 +60,8 @@ def extract_features(packet):
         protocol,
         src_port,
         dst_port,
-        packet_length
+        packet_length,
+        CURRENT_LABEL
     ]
 
 def process_packet(packet):
@@ -67,7 +70,6 @@ def process_packet(packet):
 
     features = extract_features(packet)
 
-    # Save features to CSV
     with open(csv_file, mode="a", newline="") as file:
         writer = csv.writer(file)
         writer.writerow(features)
@@ -76,15 +78,17 @@ def process_packet(packet):
         f"[{features[0]}] "
         f"{features[1]} -> {features[2]} "
         f"{features[3]} "
-        f"len={features[6]}"
+        f"len={features[6]} "
+        f"label={features[7]}"
     )
 
 def start_sniffer(interface="eth0", packet_limit=10):
     print("=" * 60)
     print("AI-Based Network Intrusion Detection System")
-    print("Phase 2 Part B: Feature Extraction Module")
+    print("Phase 3: Labeled Traffic Capture")
     print(f"Interface    : {interface}")
     print(f"Packet limit : {packet_limit}")
+    print(f"Label        : {CURRENT_LABEL}")
     print(f"CSV Output   : {csv_file}")
     print("=" * 60)
 

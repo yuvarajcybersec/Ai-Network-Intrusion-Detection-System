@@ -1,0 +1,11 @@
+timestamp,src_ip,dst_ip,protocol,src_port,dst_port,packet_length,label
+2026-08-26 14:07:34,N/A,N/A,OTHER,0,0,42,suspicious
+2026-08-26 14:07:34,N/A,N/A,OTHER,0,0,64,suspicious
+2026-08-26 14:07:34,10.0.2.15,192.168.56.101,ICMP,0,0,42,suspicious
+2026-08-26 14:07:34,10.0.2.15,192.168.56.101,TCP,51467,443,58,suspicious
+2026-08-26 14:07:34,10.0.2.15,192.168.56.101,TCP,51467,80,54,suspicious
+2026-08-26 14:07:34,10.0.2.15,192.168.56.101,ICMP,0,0,54,suspicious
+2026-08-26 14:07:34,192.168.56.101,10.0.2.15,TCP,80,51467,60,suspicious
+2026-08-26 14:07:34,N/A,N/A,OTHER,0,0,86,suspicious
+2026-08-26 14:07:34,N/A,N/A,OTHER,0,0,86,suspicious
+2026-08-26 14:07:34,N/A,N/A,OTHER,0,0,107,suspicious
