@@ -1,0 +1,28 @@
+Phase 8 – Model Performance Evaluation
+==================================================
+
+Dataset: data/processed/features.csv
+Samples: 30
+Test samples: 9
+
+Metrics
+------------------------------
+Accuracy: 1.0000
+Precision: 1.0000
+Recall: 1.0000
+F1-Score: 1.0000
+
+Confusion Matrix
+------------------------------
+[[3 0]
+ [0 6]]
+
+Feature Importance
+------------------------------
+         feature  importance
+   packet_length    0.393156
+protocol_encoded    0.183007
+  dst_ip_present    0.153296
+  src_ip_present    0.152740
+        src_port    0.066862
+        dst_port    0.050939
